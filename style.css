@@ -1,0 +1,406 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Figtree", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+  grid-gap: 8px;
+  padding: 8px;
+  background-color: #000;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  height: 100%;
+  gap: 8px;
+  background-color: #000;
+}
+
+.home {
+  padding: 8px 12px;
+  height: 120px;
+  border-radius: 8px;
+  background-color: #121212;
+}
+
+#h-m-anchor {
+  display: flex;
+  align-items: center;
+  padding: 4px 12px;
+  font-weight: 600;
+  opacity: 0.7;
+  gap: 1.5rem;
+  height: 40px;
+}
+
+.library {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: #121212;
+  height: 100%;
+  width: 100%;
+}
+.lib-header {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1rem;
+  position: sticky;
+  min-height: 6.5rem;
+}
+
+.lib-header-title {
+  display: flex;
+  font-weight: 600;
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
+  justify-content: space-between;
+}
+.img-icon {
+  aspect-ratio: 1/1;
+  width: 1.3rem;
+  margin-right: 0.7rem;
+}
+.title-a,
+.title-b {
+  display: flex;
+  opacity: 0.7;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+}
+.title-a:hover,
+.title-b:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+.lib-header-filter {
+  display: flex;
+  padding: 0 1rem;
+  height: 3rem;
+  align-items: center;
+  gap: 0.5rem;
+}
+.badge {
+  background-color: #232323;
+  border: none;
+  width: fit-content;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 400;
+  opacity: 0.8;
+  font-size: 0.81rem;
+}
+.badge:hover {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+.lib-main {
+  overflow: auto;
+  padding: 0.5rem;
+  height: auto;
+}
+.lib-main-srch {
+  line-height: 2rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lib-cards {
+  background-color: inherit;
+  border: none;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+.lib-cards-img {
+  aspect-ratio: 1/1;
+  width: 3rem;
+  border-radius: 50%;
+}
+.lib-cards #a {
+  min-width: 4rem;
+  transition: 3s 2s ease-in;
+}
+.lib-cards:hover {
+  background-color: #232323;
+  border-radius: 0.5rem;
+}
+#b {
+  padding-top: 0.4rem;
+  width: 100%;
+}
+#pa {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.9rem;
+}
+#pb {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main {
+  transition-duration: 2s;
+  transition-delay: 2s;
+
+  border-radius: 10px;
+  background-color: #121212;
+  overflow: auto;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  padding: 0rem 1.1rem;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  background: #121212;
+}
+.sticky-nav .arrow button {
+  border: none;
+  background-color: #000;
+  height: 2.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  margin: 1rem 1rem 0 0;
+}
+.arrow-nav {
+  font-size: 1.6rem;
+  color: #fff;
+}
+.user-aux {
+  display: flex;
+  padding-top: 1rem;
+}
+.main-content {
+  padding: 0.8rem 0.8rem;
+}
+.track-cat {
+  margin: 1rem 0;
+}
+.cat-title {
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+.cat-title-l {
+  font-size: 1.3rem;
+}
+.cat-title-r {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.tracks {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+.card {
+  background-color: #181818;
+  padding: 0.9rem;
+  border-radius: 1rem;
+  transition: 0.5s ease-in-out;
+}
+.card-img {
+  border-radius: 1rem;
+  aspect-ratio: 1/1;
+  width: 100%;
+}
+.card-l0 {
+  margin-bottom: 0.8rem;
+  border-radius: 1rem;
+  z-index: 2;
+  filter: drop-shadow(0 0 1rem #080808);
+}
+.card-l1 {
+  max-height: 1.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+.card-l2 {
+  line-height: 1rem;
+  max-height: 2rem;
+  opacity: 0.7;
+  font-size: 0.8rem;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+.card:hover {
+  background-color: #282828;
+}
+
+
+
+
+
+
+
+
+
+
+.player-console {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 72px;
+    background-color: #000;
+    grid-column: 1 / span 2;
+}
+    .console-cen {
+        display: flex;
+        flex-direction: column;
+    }
+        .con-cen-l1 {
+            display: flex;
+            gap: 1rem;
+        }
+        .con-cen-l2 {
+
+        }
+
+
+
+.btn-play {
+  border: none;
+  background: transparent;
+  aspect-ratio: 1/1;
+  width: 2rem;
+  font-size: 2rem;
+}
+.btn {
+  border: none;
+  background: transparent;
+  aspect-ratio: 1/1;
+  width: 2rem;
+  font-size: 1.2rem;
+}
+        
+.btn-rpt {
+  
+  /* width: 2rem; */
+  background-color: transparent;
+  border: none;
+  /* color: #fff; */
+  opacity: ;
+}
+.btn-rpt-img {
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+  background-size: contain;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* icons size secondary and main */
+.i-main {
+  font-size: 1.5rem;
+}
+.i-sec {
+  margin-left: 0.6rem;
+  font-size: 1.2rem;
+}
+
+.badge-usr {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  margin-left: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 900;
+  border-radius: 2rem;
+  border: none;
+  padding: 0.25rem 1rem;
+  background-color: #080808;
+  opacity: 1;
+}
+.badge-usr:hover {
+  transform: scale(1.02);
+}
+.badge-prem {
+  background-color: #fff;
+  color: #000;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  visibility: hidden;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background: #646464;
+  visibility: hidden;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #898989;
+}
+
+.main:hover::-webkit-scrollbar-thumb,
+.library:hover ::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
